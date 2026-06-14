@@ -1,0 +1,9 @@
+# Windows system files
+Thumbs.db
+desktop.ini
+
+# Browser/OS Metadata
+.DS_Store
+
+# IDE settings
+.vscode/
