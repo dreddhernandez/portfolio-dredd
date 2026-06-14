@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dredd Xander Hernandez — CS Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.add('light');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">Dredd Hernandez</span>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle appearance">
+        <span class="toggle-icon">🌓</span>
+        <span>Appearance</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section id="hero">
+    <div class="grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-tag">📍 Calamba, Laguna · Open to opportunities</span>
+        <h1 class="hero-name">
+          Dredd Xander<br>
+          <span class="accent-word">Hernandez</span>
+        </h1>
+        <p class="hero-sub">
+          Fresh Computer Science graduate building real-world systems — from IoT evacuation networks to IT support infrastructure. Ready to contribute from day one.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn-primary">View Projects →</a>
+          <a href="mailto:dreddhernandez12@gmail.com" class="btn-outline">✉ Get in Touch</a>
+          <a href="assets/Dredd_Hernandez_CV.pdf" class="btn-outline" target="_blank" download="Dredd_Hernandez_CV.pdf">📄 Download CV</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="img/FormalIDPicture.jpg" alt="Dredd Xander Hernandez" class="formal-photo">
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section id="about">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">// 01 about</p>
+        <h2 class="section-heading">Who I Am</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="about-grid reveal">
+        <div class="about-text">
+          <p>
+            I'm a <strong>BS Computer Science graduate</strong> from City of Calamba College with hands-on experience in IT support, web development, and embedded systems. I've worked in fast-paced environments — from healthcare operations to school IT infrastructure — and I bring the same systematic thinking to every project I tackle.
+          </p>
+          <p>
+            Beyond code, I led student government and tech society roles that sharpened my communication, coordination, and leadership under pressure. I care about building things that actually work and actually matter.
+          </p>
+          <p>
+            I'm actively looking for a role in <strong>IT support, web development, or software engineering</strong> where I can keep growing while contributing real value.
+          </p>
+        </div>
+        <div>
+          <div class="stat-row">
+            <div class="stat-box">
+              <div class="stat-num">2026</div>
+              <div class="stat-label">BS CS Graduate</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">2</div>
+              <div class="stat-label">Internship & Work Roles</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Certifications Earned</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Skills ── -->
+  <section id="skills">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">// 02 skills</p>
+        <h2 class="section-heading">What I Work With</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">💻</div>
+          <h3>Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">C / C++</span>
+            <span class="skill-tag">Arduino IDE</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🗄️</div>
+          <h3>Data & Systems</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Database Management</span>
+            <span class="skill-tag">Kintone</span>
+            <span class="skill-tag">Data Encoding</span>
+            <span class="skill-tag">Microsoft 365</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🔧</div>
+          <h3>IT & Infrastructure</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">IT Troubleshooting</span>
+            <span class="skill-tag">Cybersecurity Basics</span>
+            <span class="skill-tag">2FA Setup</span>
+            <span class="skill-tag">Hardware Basics</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🎨</div>
+          <h3>Design & Media</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Graphics Design</span>
+            <span class="skill-tag">Video Editing</span>
+            <span class="skill-tag">Social Media Content</span>
+            <span class="skill-tag">SEO</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">🤝</div>
+          <h3>Soft Skills</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Leadership</span>
+            <span class="skill-tag">Problem Solving</span>
+            <span class="skill-tag">Team Collaboration</span>
+            <span class="skill-tag">Communication</span>
+            <span class="skill-tag">Time Management</span>
+          </div>
+        </div>
+        <div class="skill-card reveal">
+          <div class="skill-card-icon">📡</div>
+          <h3>Embedded & IoT</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">ESP32</span>
+            <span class="skill-tag">Sensor Integration</span>
+            <span class="skill-tag">TinyML</span>
+            <span class="skill-tag">Dijkstra's Algorithm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Projects ── -->
+  <section id="projects">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">// 03 projects</p>
+        <h2 class="section-heading">Things I've Built</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div class="project-type">Thesis · IoT / Embedded Systems</div>
+          <h3 class="project-title">Earthquake Detection & Smart Evacuation System (ADES)</h3>
+          <p class="project-desc">
+            An IoT-based embedded system for real-time earthquake detection and smart evacuation guidance. Implemented Dijkstra's Algorithm for dynamic pathfinding and automatic rerouting around blocked exits. Integrated sensors, LEDs, and buzzers with TinyML-based computer vision for obstacle detection.
+          </p>
+          <div class="project-tech">
+            <span>ESP32</span>
+            <span>C/C++</span>
+            <span>Arduino IDE</span>
+            <span>TinyML</span>
+            <span>Dijkstra's Algo</span>
+            <span>IoT Sensors</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-type">Internship · Web Development</div>
+          <h3 class="project-title">Infotech Website UI Improvements</h3>
+          <p class="project-desc">
+            Contributed to website development and UI enhancements during OJT at Infotech Professional Services. Handled content structuring, layout improvements, and interactive front-end components to improve user experience.
+          </p>
+          <div class="project-tech">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>UI/UX</span>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-type">Internship · Data Systems</div>
+          <h3 class="project-title">Applicant & Student Data Management</h3>
+          <p class="project-desc">
+            Designed and managed structured data workflows for applicant and student records using Kintone database systems. Ensured accuracy, consistency, and accessibility of records for recruitment and academic use cases.
+          </p>
+          <div class="project-tech">
+            <span>Kintone</span>
+            <span>Database Management</span>
+            <span>Data Encoding</span>
+            <span>Process Design</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience ── -->
+  <section id="experience">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">// 04 experience</p>
+        <h2 class="section-heading">Where I've Worked</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">Jan 2026 – Apr 2026</div>
+          <div class="timeline-role">IT Support Intern / OJT Trainee</div>
+          <div class="timeline-company">Infotech Professional Services Inc.</div>
+          <ul class="timeline-list">
+            <li>Provided IT support and troubleshooting, improving staff workflow efficiency.</li>
+            <li>Managed and encoded applicant and student records using Kintone.</li>
+            <li>Contributed to website development using HTML, CSS, and JavaScript.</li>
+            <li>Created multimedia content including videos, flyers, and social media posts.</li>
+            <li>Assisted in implementing cybersecurity measures including 2FA setup.</li>
+          </ul>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">Jul 2025 – Dec 2025</div>
+          <div class="timeline-role">Customer Service Representative</div>
+          <div class="timeline-company">NextVAS Inc.</div>
+          <ul class="timeline-list">
+            <li>Reviewed and verified patient lab results for accuracy and completeness.</li>
+            <li>Assessed eligibility and processed medication refill requests per protocol.</li>
+            <li>Communicated lab and medication updates via email to patients and providers.</li>
+          </ul>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-period">2023 – 2025</div>
+          <div class="timeline-role">Batch Representative</div>
+          <div class="timeline-company">Computer Science Society · City of Calamba College</div>
+          <ul class="timeline-list">
+            <li>Represented the CS batch in organization-wide planning and events.</li>
+            <li>Coordinated between student body and faculty for academic initiatives.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Certifications ── -->
+  <section id="certifications">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">// 05 certifications</p>
+        <h2 class="section-heading">Credentials</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="certs-grid">
+        <a href="https://web.certificate.wfglobal.org/en/certificate?certificateId=69ec776104808ecbd84c7c23" target="_blank" rel="noopener" class="cert-card reveal">
+          <span class="cert-icon">🌐</span>
+          <div>
+            <div class="cert-name">IT Support Specialist Career Path</div>
+            <div class="cert-issuer">Cisco</div>
+          </div>
+        </a>
+        <a href="https://www.credly.com/badges/6a3ed9cc-e4b5-4398-8fec-5f03dbb603fd/linked_in_profile" target="_blank" rel="noopener" class="cert-card reveal">
+          <span class="cert-icon">🖥️</span>
+          <div>
+            <div class="cert-name">Computer Hardware Basics</div>
+            <div class="cert-issuer">Cisco</div>
+          </div>
+        </a>
+        <a href="https://app-na2.hubspot.com/academy/achievements/z3lbvxmc/en/1/dredd-xander-hernandez/seo-certified" target="_blank" rel="noopener" class="cert-card reveal">
+          <span class="cert-icon">🔍</span>
+          <div>
+            <div class="cert-name">SEO Certified</div>
+            <div class="cert-issuer">HubSpot Academy</div>
+          </div>
+        </a>
+        <div class="cert-card reveal">
+          <span class="cert-icon">🔒</span>
+          <div>
+            <div class="cert-name">Data Privacy Awareness Training</div>
+            <div class="cert-issuer">Training Completion</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Contact ── -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner reveal">
+        <p class="section-label">// 06 contact</p>
+        <h2 class="section-heading">Let's Work Together</h2>
+        <div class="section-divider" style="margin: 1rem auto 2rem;"></div>
+        <p>I'm currently open to full-time roles in IT support, web development, or software engineering. If you have an opportunity that fits — or just want to connect — my inbox is always open.</p>
+        <div class="contact-links">
+          <a href="mailto:dreddhernandez12@gmail.com" class="btn-primary">✉ dreddhernandez12@gmail.com</a>
+          <a href="https://www.linkedin.com/in/dredd-hernandez-work/" target="_blank" rel="noopener" class="btn-outline">🔗 LinkedIn</a>
+          <a href="assets/Dredd_Hernandez_CV.pdf" class="btn-outline" target="_blank" download="Dredd_Hernandez_CV.pdf">📄 Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      © 2026 Dredd Xander Hernandez · Built with HTML, CSS & ☕
+    </div>
+  </footer>
+
+  <!-- ── Scroll Reveal Script ── -->
+  <script>
+    // Theme Toggle Logic
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+
+    themeToggle.addEventListener('click', () => {
+      const isLight = html.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
