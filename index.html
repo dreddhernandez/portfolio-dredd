@@ -243,27 +243,27 @@
 
           <!-- Gallery thumbnails -->
           <div class="revquiz-gallery">
-            <button class="gallery-thumb" onclick="openLightbox(0)" aria-label="View screenshot 1">
+            <button class="gallery-thumb" onclick="openLightbox('revquiz', 0)" aria-label="View screenshot 1">
               <img src="Projects/RevQuiz/RevPic1.png" alt="RevQuiz screenshot 1" loading="lazy">
               <span class="thumb-overlay">🔍</span>
             </button>
-            <button class="gallery-thumb" onclick="openLightbox(1)" aria-label="View screenshot 2">
+            <button class="gallery-thumb" onclick="openLightbox('revquiz', 1)" aria-label="View screenshot 2">
               <img src="Projects/RevQuiz/RevPic2.png" alt="RevQuiz screenshot 2" loading="lazy">
               <span class="thumb-overlay">🔍</span>
             </button>
-            <button class="gallery-thumb" onclick="openLightbox(2)" aria-label="View screenshot 3">
+            <button class="gallery-thumb" onclick="openLightbox('revquiz', 2)" aria-label="View screenshot 3">
               <img src="Projects/RevQuiz/RevPic3.png" alt="RevQuiz screenshot 3" loading="lazy">
               <span class="thumb-overlay">🔍</span>
             </button>
-            <button class="gallery-thumb" onclick="openLightbox(3)" aria-label="View screenshot 4">
+            <button class="gallery-thumb" onclick="openLightbox('revquiz', 3)" aria-label="View screenshot 4">
               <img src="Projects/RevQuiz/RevPic4.png" alt="RevQuiz screenshot 4" loading="lazy">
               <span class="thumb-overlay">🔍</span>
             </button>
-            <button class="gallery-thumb" onclick="openLightbox(4)" aria-label="View screenshot 5">
+            <button class="gallery-thumb" onclick="openLightbox('revquiz', 4)" aria-label="View screenshot 5">
               <img src="Projects/RevQuiz/RevPic5.png" alt="RevQuiz screenshot 5" loading="lazy">
               <span class="thumb-overlay">🔍</span>
             </button>
-            <button class="gallery-thumb" onclick="openLightbox(5)" aria-label="View screenshot 6">
+            <button class="gallery-thumb" onclick="openLightbox('revquiz', 5)" aria-label="View screenshot 6">
               <img src="Projects/RevQuiz/RevPic6.png" alt="RevQuiz screenshot 6" loading="lazy">
               <span class="thumb-overlay">🔍</span>
             </button>
@@ -280,6 +280,40 @@
           <button class="btn-demo" onclick="openVideoModal()">
             ▶ Watch Demo
           </button>
+        </div>
+
+        <!-- ── Heaven & Earth ── -->
+        <div class="project-card revquiz-card reveal" id="heaven-earth-card">
+          <div class="project-type">Personal Project · Web Development</div>
+          <div class="revquiz-role-badge">Lead Developer</div>
+          <h3 class="project-title">Heaven & Earth – Weather & Daily Word Platform</h3>
+          <p class="project-desc">
+            Heaven & Earth is a full-stack-inspired web application combining real-time weather forecasting with daily inspirational Bible verses. Leveraging OpenWeatherMap and OurManna APIs, it features geolocation detection, city search, and dynamic UI transitions based on atmospheric conditions and time of day.
+          </p>
+
+          <!-- Gallery thumbnails -->
+          <div class="revquiz-gallery">
+            <button class="gallery-thumb" onclick="openLightbox('heaven', 0)" aria-label="View screenshot 1">
+              <img src="C:\Users\lenovo\Downloads\Portfolio-DX\Projects\HeavenAndEarth\Heaven1.png" alt="Heaven & Earth screenshot 1" loading="lazy">
+              <span class="thumb-overlay">🔍</span>
+            </button>
+            <button class="gallery-thumb" onclick="openLightbox('heaven', 1)" aria-label="View screenshot 2">
+              <img src="C:\Users\lenovo\Downloads\Portfolio-DX\Projects\HeavenAndEarth\Heaven2.png" alt="Heaven & Earth screenshot 2" loading="lazy">
+              <span class="thumb-overlay">🔍</span>
+            </button>
+          </div>
+
+          <div class="project-tech" style="margin-bottom:1.25rem;">
+            <span>API Integration</span>
+            <span>Asynchronous JS</span>
+            <span>REST APIs</span>
+            <span>DOM Manipulation</span>
+            <span>UI/UX</span>
+          </div>
+
+          <a href="https://heaven-earth.vercel.app/" target="_blank" class="btn-demo" style="text-decoration: none;">
+            🌐 View Web App
+          </a>
         </div>
 
       </div>
@@ -360,7 +394,7 @@
     <div class="container">
       <div class="reveal">
         <p class="section-label">// 05 certifications</p>
-        <h2 class="section-heading">Credentials</h2>
+        <h2 class="section-heading">Certifications</h2>
         <div class="section-divider"></div>
       </div>
       <div class="certs-grid">
@@ -422,25 +456,33 @@
 
   <!-- ── RevQuiz Gallery & Video Scripts ── -->
   <script>
-    const revquizImages = [
-      'Projects/RevQuiz/RevPic1.png',
-      'Projects/RevQuiz/RevPic2.png',
-      'Projects/RevQuiz/RevPic3.png',
-      'Projects/RevQuiz/RevPic4.png',
-      'Projects/RevQuiz/RevPic5.png',
-      'Projects/RevQuiz/RevPic6.png',
-    ];
+    const galleries = {
+      revquiz: [
+        'Projects/RevQuiz/RevPic1.png',
+        'Projects/RevQuiz/RevPic2.png',
+        'Projects/RevQuiz/RevPic3.png',
+        'Projects/RevQuiz/RevPic4.png',
+        'Projects/RevQuiz/RevPic5.png',
+        'Projects/RevQuiz/RevPic6.png',
+      ],
+      heaven: [
+        'C:\\Users\\lenovo\\Downloads\\Portfolio-DX\\Projects\\HeavenAndEarth\\Heaven1.png',
+        'C:\\Users\\lenovo\\Downloads\\Portfolio-DX\\Projects\\HeavenAndEarth\\Heaven2.png',
+      ]
+    };
+    let currentGalleryKey = 'revquiz';
     let currentIndex = 0;
 
-    function openLightbox(index) {
+    function openLightbox(galleryKey, index) {
+      currentGalleryKey = galleryKey;
       currentIndex = index;
       const lb = document.getElementById('lightbox');
       const img = document.getElementById('lightbox-img');
       const cur = document.getElementById('lb-current');
       const tot = document.getElementById('lb-total');
-      img.src = revquizImages[currentIndex];
+      img.src = galleries[currentGalleryKey][currentIndex];
       cur.textContent = currentIndex + 1;
-      tot.textContent = revquizImages.length;
+      tot.textContent = galleries[currentGalleryKey].length;
       lb.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
@@ -455,11 +497,12 @@
     }
 
     function shiftLightbox(dir) {
-      currentIndex = (currentIndex + dir + revquizImages.length) % revquizImages.length;
+      const images = galleries[currentGalleryKey];
+      currentIndex = (currentIndex + dir + images.length) % images.length;
       const img = document.getElementById('lightbox-img');
       img.style.opacity = '0';
       setTimeout(() => {
-        img.src = revquizImages[currentIndex];
+        img.src = images[currentIndex];
         document.getElementById('lb-current').textContent = currentIndex + 1;
         img.style.opacity = '1';
       }, 150);
