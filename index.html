@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="hero-image">
-        <img src="img/FormalIDPicture.jpg" alt="Dredd Xander Hernandez" class="formal-photo">
+        <img src="C:\Users\lenovo\Downloads\Portfolio-DX\img\FormalIDPicture.png" alt="Dredd Xander Hernandez" class="formal-photo">
       </div>
     </div>
     <div class="hero-scroll">
@@ -231,9 +231,82 @@
             <span>Process Design</span>
           </div>
         </div>
+
+        <!-- ── RevQuiz ── -->
+        <div class="project-card revquiz-card reveal" id="revquiz-card">
+          <div class="project-type">Academic · Web Development</div>
+          <div class="revquiz-role-badge">Front-End Developer Lead</div>
+          <h3 class="project-title">RevQuiz — Interactive Quiz & Review App</h3>
+          <p class="project-desc">
+            Interactive quiz and review web app that auto-generates quizzes from uploaded documents (PPT, DOCX, PDF). Built a custom content extraction engine to streamline study workflows.
+          </p>
+
+          <!-- Gallery thumbnails -->
+          <div class="revquiz-gallery">
+            <button class="gallery-thumb" onclick="openLightbox(0)" aria-label="View screenshot 1">
+              <img src="Projects/RevQuiz/RevPic1.png" alt="RevQuiz screenshot 1" loading="lazy">
+              <span class="thumb-overlay">🔍</span>
+            </button>
+            <button class="gallery-thumb" onclick="openLightbox(1)" aria-label="View screenshot 2">
+              <img src="Projects/RevQuiz/RevPic2.png" alt="RevQuiz screenshot 2" loading="lazy">
+              <span class="thumb-overlay">🔍</span>
+            </button>
+            <button class="gallery-thumb" onclick="openLightbox(2)" aria-label="View screenshot 3">
+              <img src="Projects/RevQuiz/RevPic3.png" alt="RevQuiz screenshot 3" loading="lazy">
+              <span class="thumb-overlay">🔍</span>
+            </button>
+            <button class="gallery-thumb" onclick="openLightbox(3)" aria-label="View screenshot 4">
+              <img src="Projects/RevQuiz/RevPic4.png" alt="RevQuiz screenshot 4" loading="lazy">
+              <span class="thumb-overlay">🔍</span>
+            </button>
+            <button class="gallery-thumb" onclick="openLightbox(4)" aria-label="View screenshot 5">
+              <img src="Projects/RevQuiz/RevPic5.png" alt="RevQuiz screenshot 5" loading="lazy">
+              <span class="thumb-overlay">🔍</span>
+            </button>
+            <button class="gallery-thumb" onclick="openLightbox(5)" aria-label="View screenshot 6">
+              <img src="Projects/RevQuiz/RevPic6.png" alt="RevQuiz screenshot 6" loading="lazy">
+              <span class="thumb-overlay">🔍</span>
+            </button>
+          </div>
+
+          <div class="project-tech" style="margin-bottom:1.25rem;">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Document Parsing</span>
+            <span>UI/UX</span>
+          </div>
+
+          <button class="btn-demo" onclick="openVideoModal()">
+            ▶ Watch Demo
+          </button>
+        </div>
+
       </div>
     </div>
   </section>
+
+  <!-- ── Lightbox Modal ── -->
+  <div id="lightbox" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Image viewer" onclick="closeLightboxOnBg(event)">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" onclick="shiftLightbox(-1)" aria-label="Previous">&#8592;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="RevQuiz screenshot">
+      <div class="lightbox-counter"><span id="lb-current">1</span> / <span id="lb-total">6</span></div>
+    </div>
+    <button class="lightbox-nav lightbox-next" onclick="shiftLightbox(1)" aria-label="Next">&#8594;</button>
+  </div>
+
+  <!-- ── Video Modal ── -->
+  <div id="video-modal" class="lightbox-overlay" role="dialog" aria-modal="true" aria-label="Demo video" onclick="closeVideoOnBg(event)">
+    <button class="lightbox-close" onclick="closeVideoModal()" aria-label="Close">✕</button>
+    <div class="video-modal-content">
+      <video id="demo-video" controls preload="none" playsinline>
+        <source src="Projects/RevQuiz/RevQuizVid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
 
   <!-- ── Experience ── -->
   <section id="experience">
@@ -343,9 +416,83 @@
   <!-- ── Footer ── -->
   <footer>
     <div class="container">
-      © 2026 Dredd Xander Hernandez · Built with HTML, CSS & ☕
+      © 2026 Dredd Xander Hernandez • All Rights Reserved
     </div>
   </footer>
+
+  <!-- ── RevQuiz Gallery & Video Scripts ── -->
+  <script>
+    const revquizImages = [
+      'Projects/RevQuiz/RevPic1.png',
+      'Projects/RevQuiz/RevPic2.png',
+      'Projects/RevQuiz/RevPic3.png',
+      'Projects/RevQuiz/RevPic4.png',
+      'Projects/RevQuiz/RevPic5.png',
+      'Projects/RevQuiz/RevPic6.png',
+    ];
+    let currentIndex = 0;
+
+    function openLightbox(index) {
+      currentIndex = index;
+      const lb = document.getElementById('lightbox');
+      const img = document.getElementById('lightbox-img');
+      const cur = document.getElementById('lb-current');
+      const tot = document.getElementById('lb-total');
+      img.src = revquizImages[currentIndex];
+      cur.textContent = currentIndex + 1;
+      tot.textContent = revquizImages.length;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function closeLightboxOnBg(e) {
+      if (e.target === document.getElementById('lightbox')) closeLightbox();
+    }
+
+    function shiftLightbox(dir) {
+      currentIndex = (currentIndex + dir + revquizImages.length) % revquizImages.length;
+      const img = document.getElementById('lightbox-img');
+      img.style.opacity = '0';
+      setTimeout(() => {
+        img.src = revquizImages[currentIndex];
+        document.getElementById('lb-current').textContent = currentIndex + 1;
+        img.style.opacity = '1';
+      }, 150);
+    }
+
+    // keyboard nav
+    document.addEventListener('keydown', (e) => {
+      const lb = document.getElementById('lightbox');
+      const vm = document.getElementById('video-modal');
+      if (lb.classList.contains('active')) {
+        if (e.key === 'ArrowLeft')  shiftLightbox(-1);
+        if (e.key === 'ArrowRight') shiftLightbox(1);
+        if (e.key === 'Escape')     closeLightbox();
+      }
+      if (vm.classList.contains('active') && e.key === 'Escape') closeVideoModal();
+    });
+
+    function openVideoModal() {
+      document.getElementById('video-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeVideoModal() {
+      const vid = document.getElementById('demo-video');
+      vid.pause();
+      document.getElementById('video-modal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function closeVideoOnBg(e) {
+      if (e.target === document.getElementById('video-modal')) closeVideoModal();
+    }
+  </script>
 
   <!-- ── Scroll Reveal Script ── -->
   <script>
